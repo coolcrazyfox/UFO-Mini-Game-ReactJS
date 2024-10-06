@@ -1,5 +1,5 @@
 function App() {
-  return <div></div>;
+  return <div>History</div>;
 }
 
 export default App;
