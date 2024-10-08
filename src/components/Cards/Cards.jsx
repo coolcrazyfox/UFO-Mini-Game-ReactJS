@@ -5,6 +5,9 @@ import img3 from "../../assets/images/cards/6.png";
 import img4 from "../../assets/images/cards/10.png";
 import img5 from "../../assets/images/cards/8.png";
 import img6 from "../../assets/images/cards/9.png";
+
+import imgQ from "../../assets/images/question-lemon.png";
+
 const initCards = [
   { id: 1, name: "", img: img1 },
   { id: 2, name: "", img: img2 },
@@ -13,6 +16,7 @@ const initCards = [
   { id: 5, name: "", img: img5 },
   { id: 6, name: "", img: img6 },
 ];
+
 const Cards = () => {
   return (
     <div>
