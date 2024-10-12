@@ -5,7 +5,6 @@ import img3 from "../../assets/images/cards/6.png";
 import img4 from "../../assets/images/cards/10.png";
 import img5 from "../../assets/images/cards/8.png";
 import img6 from "../../assets/images/cards/9.png";
-
 import imgQ from "../../assets/images/question-lemon.png";
 import { useEffect, useState } from "react";
 
@@ -18,17 +17,30 @@ const initCards = [
   { id: 6, name: "6", img: img6 },
 ];
 
+const pairOfArrayCards = [...initCards, ...initCards];
+
 const Cards = () => {
   const [arrayCards, setArrayCards] = useState([]);
   const [openedCards, setOpenedCards] = useState([]);
   const [matched, setMatched] = useState([]);
   const [moves, setMoves] = useState(0);
-  const pairOfArrayCards = [...initCards, ...initCards];
+
   const randomSort = (array) => {
     let currentIndex = array.length,
-      tempraryVaue,
+      temporaryValue,
       randomIndex;
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
   };
+  useEffect(() => {
+    setArrayCards(randomSort(pairOfArrayCards));
+  }, []);
   return (
     <div>
       <div>
