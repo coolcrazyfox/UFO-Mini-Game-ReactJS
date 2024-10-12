@@ -7,6 +7,7 @@ import img5 from "../../assets/images/cards/8.png";
 import img6 from "../../assets/images/cards/9.png";
 import imgQ from "../../assets/images/question-lemon.png";
 import { useEffect, useState } from "react";
+import "../../styles/Cards.css";
 
 const initCards = [
   { id: 1, name: "1", img: img1 },
