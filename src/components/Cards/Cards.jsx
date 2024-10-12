@@ -51,12 +51,12 @@ const Cards = () => {
           if (matched.includes(card.id)) isFlipped = true;
           return (
             <div className={`card ${isFlipped ? "flipped" : ""}`} key={card.id}>
-              <div>
-                <div>
-                  <img alt="" src={card.img} width={"100"} />
+              <div className="inner">
+                <div className="front">
+                  <img alt="front_card" src={card.img} width={"100"} />
                 </div>
-                <div>
-                  <img alt="" src={imgQ} width={"100"} />
+                <div className="back">
+                  <img alt="q_card" src={imgQ} width={"100"} />
                 </div>
               </div>
             </div>
