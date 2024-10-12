@@ -68,12 +68,12 @@ body {
   font-size: 100px;
   transition: 0.3s ease all;
 }
-.card .back:hove,
-.button_restart:hover {
+.card .back:hove {
   background: #942528;
   color: #efeff0;
   transform: scale(1.02);
 }
+
 .button_restart {
   cursor: pointer;
   margin-top: 15px;
@@ -81,6 +81,13 @@ body {
   font-size: 20px;
   padding: 10px;
   border-radius: 10px;
+  border-color: #efeff0;
   background: #3da96f;
+  color: #efeff0;
   transition: 0.3s ease all;
+}
+.card .button_restart:hover {
+  background: #942528;
+  color: #0707eb;
+  transform: scale(1.02);
 }
