@@ -12,6 +12,13 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+.number_of_strokes {
+  font-size: 30px;
+  min-width: 400px;
+  font-weight: bold;
+  color: #efeff0;
+  padding: 10px;
+}
 .box_cards {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(4, 1fr);
