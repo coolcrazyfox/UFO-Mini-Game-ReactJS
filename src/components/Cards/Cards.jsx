@@ -57,7 +57,7 @@ const Cards = () => {
                   <img alt="front_card" src={card.img} width={"100"} />
                 </div>
                 <div className="back">
-                  <img alt="q_card" src={imgQ} width={"100"} />
+                  <img alt="q_card" src={imgQ} width={"150"} />
                 </div>
               </div>
             </div>
