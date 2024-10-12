@@ -59,14 +59,16 @@ const Cards = () => {
                   <img alt="front_card" src={card.img} width={"100"} />
                 </div>
                 <div className="back">
-                  <img alt="q_card" src={imgQ} width={"150"} />
+                  <img alt="q_card" src={imgQ} width={"145"} />
                 </div>
               </div>
             </div>
           );
         })}
       </div>
-      <button className="button_restart">Restart</button>
+      <div className="btn_container">
+        <button className="button_restart">Restart</button>
+      </div>
     </div>
   );
 };
