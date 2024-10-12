@@ -47,3 +47,29 @@ body {
   width: 100%;
   backface-visibility: hidden;
 }
+.card .front {
+  border: 2px solid rgb(110, 182, 3);
+  background: #efeff0;
+  transform: rotateY("angle" 180deg);
+}
+.card .back {
+  background: #9c3884;
+  font-size: 100px;
+  transition: 0.3s ease all;
+}
+.card .back:hove,
+.button_restart:hover {
+  background: #942528;
+  color: #efeff0;
+  transform: scale(1.02);
+}
+.button_restart {
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #3da96f;
+  transition: 0.3s ease all;
+}

@@ -64,6 +64,7 @@ const Cards = () => {
           );
         })}
       </div>
+      <button className="button_restart">Restart</button>
     </div>
   );
 };
