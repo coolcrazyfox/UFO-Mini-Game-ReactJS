@@ -24,6 +24,7 @@ const Cards = () => {
   const [matched, setMatched] = useState([]);
   const [moves, setMoves] = useState(0);
   const pairOfArrayCards = [...initCards, ...initCards];
+
   return (
     <div>
       <div>
