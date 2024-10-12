@@ -12,3 +12,15 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+.box_cards {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  gap: 10px;
+}
+.card {
+  width: 150px;
+  height: 150px;
+  border-radius: 2px;
+  cursor: pointer;
+  /* background: #000; */
+}
