@@ -44,7 +44,9 @@ const Cards = () => {
   }, []);
   return (
     <div className="container">
-      <p className="number_of_strokes">Moves:{moves}</p>
+      <p className="number_of_strokes">
+        Moves:<span className="point">{moves}</span>
+      </p>
       <div className="box_cards">
         {initCards.map((card, index) => {
           let isFlipped = false;

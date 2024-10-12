@@ -19,6 +19,10 @@ body {
   color: #efeff0;
   padding: 10px;
 }
+.point {
+  padding-left: 10px;
+  color: #ea060e;
+}
 .box_cards {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(4, 1fr);
