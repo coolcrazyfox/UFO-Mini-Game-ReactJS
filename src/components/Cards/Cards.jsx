@@ -25,9 +25,9 @@ const Cards = () => {
   const [moves, setMoves] = useState(0);
   const pairOfArrayCards = [...initCards, ...initCards];
   const randomSort = (array) => {
-    let currentIndex = array.length;
-    let tempraryVaue;
-    let randomIndex;
+    let currentIndex = array.length,
+      tempraryVaue,
+      randomIndex;
   };
   return (
     <div>
