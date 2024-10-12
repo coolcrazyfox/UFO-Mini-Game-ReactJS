@@ -43,7 +43,7 @@ const Cards = () => {
   }, []);
   return (
     <div>
-      <p></p>
+      <p>Moves:{moves}</p>
       <div>
         {initCards.map((card, index) => {
           return (
