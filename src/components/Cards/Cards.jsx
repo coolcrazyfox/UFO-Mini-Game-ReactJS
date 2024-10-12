@@ -42,13 +42,23 @@ const Cards = () => {
     setArrayCards(randomSort(pairOfArrayCards));
   }, []);
   return (
-    <div>
-      <p>Moves:{moves}</p>
-      <div>
+    <div className="container">
+      <p className="number_of_strokes">Moves:{moves}</p>
+      <div className="box_cards">
         {initCards.map((card, index) => {
+          let isFlipped = false;
+          if (openedCards.includes(index)) isFlipped = true;
+          if (matched.includes(card.id)) isFlipped = true;
           return (
-            <div key={card.id}>
-              <img alt="" src={card.img} />
+            <div className={`card ${isFlipped ? "flipped" : ""}`} key={card.id}>
+              <div>
+                <div>
+                  <img alt="" src={card.img} width={"100"} />
+                </div>
+                <div>
+                  <img alt="" src={imgQ} width={"100"} />
+                </div>
+              </div>
             </div>
           );
         })}
