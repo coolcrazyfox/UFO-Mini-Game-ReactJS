@@ -48,7 +48,7 @@ const Cards = () => {
         Moves:<span className="point">{moves}</span>
       </p>
       <div className="box_cards">
-        {initCards.map((card, index) => {
+        {arrayCards.map((card, index) => {
           let isFlipped = false;
           if (openedCards.includes(index)) isFlipped = true;
           if (matched.includes(card.id)) isFlipped = true;
