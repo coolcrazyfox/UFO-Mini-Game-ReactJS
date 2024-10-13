@@ -43,9 +43,10 @@ const Cards = () => {
     setArrayCards(randomSort(pairOfArrayCards));
   }, []);
   const flipCard = (index) => {
-    setOpenedCards((opened) => [...opened, index]);
+    setOpenedCards((o) => [...o, index]);
     setMoves((preMove) => preMove + 1);
   };
+
   useEffect(() => {
     if (openedCards < 2) return;
     const firstMatched = arrayCards[openedCards[0]];
@@ -68,10 +69,9 @@ const Cards = () => {
           if (matched.includes(c.id)) isFlipped = true;
           return (
             <div
-              onClick={flipCard}
               className={`card ${isFlipped ? "flipped" : ""}`}
-              key={c.id}
-              // onClick={flipCard(index)}
+              key={index}
+              onClick={flipCard(index)}
             >
               <div className="inner">
                 <div className="front">
