@@ -62,19 +62,20 @@ const Cards = () => {
         Moves:<span className="point">{moves}</span>
       </p>
       <div className="box_cards">
-        {arrayCards.map((card, index) => {
+        {arrayCards.map((c, index) => {
           let isFlipped = false;
           if (openedCards.includes(index)) isFlipped = true;
-          if (matched.includes(card.id)) isFlipped = true;
+          if (matched.includes(c.id)) isFlipped = true;
           return (
             <div
+              onClick={flipCard}
               className={`card ${isFlipped ? "flipped" : ""}`}
               key={index}
-              onClick={flipCard(index)}
+              // onClick={flipCard(index)}
             >
               <div className="inner">
                 <div className="front">
-                  <img alt="front_card" src={card.img} width={"100"} />
+                  <img alt="front_card" src={c.img} width={"100"} />
                 </div>
                 <div className="back">
                   <img alt="q_card" src={imgQ} width={"145"} />
