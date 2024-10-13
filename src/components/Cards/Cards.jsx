@@ -42,7 +42,19 @@ const Cards = () => {
   useEffect(() => {
     setArrayCards(randomSort(pairOfArrayCards));
   }, []);
-  const flipCard = (index) => {};
+  const flipCard = (index) => {
+    setOpenedCards((opened) => [...opened, index]);
+    setMoves((preMove) => preMove + 1);
+  };
+  useEffect(() => {
+    if (openedCards < 2) return;
+    const firstMatched = arrayCards[openedCards[0]];
+    const secondMatched = arrayCards[openedCards[1]];
+    if (secondMatched && firstMatched.id === secondMatched.id) {
+      setMatched([...matched, firstMatched.id]);
+    }
+    if (openedCards.length === 2) setTimeout(() => setOpenedCards([]), 2000);
+  }, [openedCards]);
   const handleRestartGame = () => {};
   return (
     <div className="container">
