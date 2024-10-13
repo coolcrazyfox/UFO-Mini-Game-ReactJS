@@ -43,7 +43,7 @@ const Cards = () => {
     setArrayCards(randomSort(pairOfArrayCards));
   }, []);
   const flipCard = (index) => {
-    setOpenedCards((o) => [...o, index]);
+    // setOpenedCards((o) => [...o, index]);
     setMoves((preMove) => preMove + 1);
   };
 
@@ -76,7 +76,8 @@ const Cards = () => {
             <div
               className={`card ${isFlipped ? "flipped" : ""}`}
               key={index}
-              onClick={flipCard(index)}
+              // onClick={flipCard(index)}
+              onClick={flipCard}
             >
               <div className="inner">
                 <div className="front">
