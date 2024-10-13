@@ -69,7 +69,7 @@ const Cards = () => {
           return (
             <div
               className={`card ${isFlipped ? "flipped" : ""}`}
-              key={card.id}
+              key={index}
               onClick={flipCard(index)}
             >
               <div className="inner">
