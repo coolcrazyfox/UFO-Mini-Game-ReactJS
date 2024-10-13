@@ -60,14 +60,14 @@
 .card .front {
   border: 2px solid rgb(110, 182, 3);
   background: #efeff0;
-  transform: rotateY("angle" 180deg);
+  transform: rotateY(180deg);
 }
 .card .back {
   background: #9c3884;
   font-size: 100px;
   transition: 0.3s ease all;
 }
-.card .back:hove {
+.card .back:hover {
   background: #942528;
   color: #efeff0;
   transform: scale(1.02);
@@ -79,8 +79,8 @@
   align-items: center;
   margin: 5px;
   padding: 3px;
-  /* border: 1px solid red; */
   width: 100%;
+  transform: scale(1.05);
 }
 .button_restart {
   max-width: 200px;
@@ -97,6 +97,5 @@
 }
 .button_restart:hover {
   background: #c85d61;
-  color: #24247e;
-  transform: scale(1.02);
+  color: #e8eb0c;
 }
