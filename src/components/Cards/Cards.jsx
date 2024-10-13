@@ -8,6 +8,7 @@ import img6 from "../../assets/images/cards/9.png";
 import imgQ from "../../assets/images/question-lemon.png";
 import { useEffect, useState } from "react";
 import "../../styles/Cards.css";
+import CardItem from "./CardItem";
 
 const initCards = [
   { id: 1, name: "1", img: img1 },
@@ -42,21 +43,26 @@ const Cards = () => {
   useEffect(() => {
     setArrayCards(randomSort(pairOfArrayCards));
   }, []);
-  const flipCard = (index) => {
-    setOpenedCards((o) => [...o, index]);
-    setMoves((preMove) => preMove + 1);
-  };
+  // const flipCard = (index) => {
+  //   // setOpenedCards((o) => [...o, index]);
+  //   setMoves((preMove) => preMove + 1);
+  // };
 
-  useEffect(() => {
-    if (openedCards < 2) return;
-    const firstMatched = arrayCards[openedCards[0]];
-    const secondMatched = arrayCards[openedCards[1]];
-    if (secondMatched && firstMatched.id === secondMatched.id) {
-      setMatched([...matched, firstMatched.id]);
-    }
-    if (openedCards.length === 2) setTimeout(() => setOpenedCards([]), 2000);
-  }, [openedCards]);
-  const handleRestartGame = () => {};
+  // useEffect(() => {
+  //   if (openedCards < 2) return;
+  //   const firstMatched = arrayCards[openedCards[0]];
+  //   const secondMatched = arrayCards[openedCards[1]];
+  //   if (secondMatched && firstMatched.id === secondMatched.id) {
+  //     setMatched([...matched, firstMatched.id]);
+  //   }
+  //   if (openedCards.length === 2) setTimeout(() => setOpenedCards([]), 2000);
+  // }, [openedCards]);
+  const handleRestartGame = () => {
+    setOpenedCards([]);
+    setMatched([]);
+    setMoves(0);
+    setArrayCards(randomSort(pairOfArrayCards));
+  };
   return (
     <div className="container">
       <p className="number_of_strokes">
@@ -68,6 +74,17 @@ const Cards = () => {
           if (openedCards.includes(index)) isFlipped = true;
           if (matched.includes(c.id)) isFlipped = true;
           return (
+            <div key={index}>
+              <CardItem
+                card={c}
+                isFlipped={isFlipped}
+                // flipCardChildrenF={flipCard}
+                index={index}
+              />
+            </div>
+          );
+          {
+            /* (
             <div
               className={`card ${isFlipped ? "flipped" : ""}`}
               key={index}
@@ -82,7 +99,8 @@ const Cards = () => {
                 </div>
               </div>
             </div>
-          );
+          ); */
+          }
         })}
       </div>
       <div className="btn_container">
