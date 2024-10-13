@@ -42,6 +42,8 @@ const Cards = () => {
   useEffect(() => {
     setArrayCards(randomSort(pairOfArrayCards));
   }, []);
+  const flipCard = (index) => {};
+  const handleRestartGame = () => {};
   return (
     <div className="container">
       <p className="number_of_strokes">
@@ -53,7 +55,11 @@ const Cards = () => {
           if (openedCards.includes(index)) isFlipped = true;
           if (matched.includes(card.id)) isFlipped = true;
           return (
-            <div className={`card ${isFlipped ? "flipped" : ""}`} key={card.id}>
+            <div
+              className={`card ${isFlipped ? "flipped" : ""}`}
+              key={card.id}
+              onClick={flipCard(index)}
+            >
               <div className="inner">
                 <div className="front">
                   <img alt="front_card" src={card.img} width={"100"} />
@@ -67,7 +73,9 @@ const Cards = () => {
         })}
       </div>
       <div className="btn_container">
-        <button className="button_restart">Restart</button>
+        <button className="button_restart" onClick={handleRestartGame}>
+          Restart
+        </button>
       </div>
     </div>
   );
